@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('firmware', function (Blueprint $table) {
             $table->id();
+            $table->string("series", 50);
+            $table->text("file");
+            $table->foreignId("category_id")->constrained("device_categories");
+            $table->foreignId("brand_id")->constrained("brands");
             $table->timestamps();
         });
     }

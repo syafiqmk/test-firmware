@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('device_categories', function (Blueprint $table) {
             $table->id();
+            $table->string("category", 30);
             $table->timestamps();
         });
     }

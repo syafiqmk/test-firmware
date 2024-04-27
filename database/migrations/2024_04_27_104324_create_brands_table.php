@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
-            $table->string("brand_name");
-            $table->text("image");
+            $table->string("brand_name", 50);
+            $table->text("image")->nullable();
             $table->timestamps();
         });
     }
