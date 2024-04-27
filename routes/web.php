@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\GeneralController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route for GeneralController
 Route::controller(GeneralController::class)->group(function() {
     Route::get('/', 'home');
+});
+
+// Route for Authentication
+Route::name('auth.')->controller(AuthController::class)->group(function() {
+
+    // Route for Guest to Login
+    Route::middleware('guest')->group(function() {
+        Route::get('/login', 'login')->name('login');
+        Route::post('/login', 'attempt')->name('loginAttempt');
+    });
+
+    // Route for Authenticated User to Logout
+    Route::get('/logout', 'logout')->middleware('auth')->name('logout');
+    
 });
