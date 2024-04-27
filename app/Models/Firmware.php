@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Firmware extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
 }
