@@ -17,7 +17,7 @@ use App\Http\Controllers\GeneralController;
 
 // Route for GeneralController
 Route::controller(GeneralController::class)->group(function() {
-    Route::get('/', 'home');
+    Route::get('/', 'home')->name('home');
 });
 
 // Route for Authentication
@@ -31,5 +31,5 @@ Route::name('auth.')->controller(AuthController::class)->group(function() {
 
     // Route for Authenticated User to Logout
     Route::get('/logout', 'logout')->middleware('auth')->name('logout');
-    
+
 });
