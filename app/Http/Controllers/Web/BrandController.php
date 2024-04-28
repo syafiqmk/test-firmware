@@ -29,7 +29,7 @@ class BrandController extends Controller
     // Store
     public function store(Request $request) {
         $validate = $request->validate([
-            "brand_name" => "required",
+            "brand_name" => "required|max:50",
             "image" => "image|file|nullable"
         ]);
 
@@ -69,7 +69,7 @@ class BrandController extends Controller
     // Update
     public function update(Request $request, Brand $brand) {
         $validate = $request->validate([
-            "brand_name" => "required",
+            "brand_name" => "required|max:50",
             "image" => "image|file|nullable"
         ]);
 
