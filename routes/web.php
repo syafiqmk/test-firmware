@@ -45,9 +45,9 @@ Route::middleware('auth')->group(function() {
         Route::get('/brand', 'index')->name('index');
         Route::get('/brand/create', 'create')->name('create');
         Route::post('/brand/create', 'store')->name('store');
-        Route::get('/brand/edit/{brand}', 'edit')->name('edit');
-        Route::put('/brand/edit/{brand}', 'update')->name('update');
-        Route::delete('/brand/delete/{brand}', 'destroy')->name('destroy');
+        Route::get('/brand/{brand}/edit', 'edit')->name('edit');
+        Route::put('/brand/{brand}/edit', 'update')->name('update');
+        Route::delete('/brand/{brand}/delete', 'destroy')->name('destroy');
     });
 
     // Device Cateogry Middleware
@@ -55,9 +55,9 @@ Route::middleware('auth')->group(function() {
         Route::get('/category', 'index')->name('index');
         Route::get('/category/create', 'create')->name('create');
         Route::post('/category/create', 'store')->name('store');
-        Route::get('/category/edit/{deviceCategory}', 'edit')->name('edit');
-        Route::put('/category/edit/{deviceCategory}', 'update')->name('update');
-        Route::delete('/category/delete/{deviceCategory}', 'destroy')->name('destroy');
+        Route::get('/category/{deviceCategory}/edit', 'edit')->name('edit');
+        Route::put('/category/{deviceCategory}/edit', 'update')->name('update');
+        Route::delete('/category/{deviceCategory}/delete', 'destroy')->name('destroy');
     });
 
     // Firmware Middleware
@@ -65,8 +65,8 @@ Route::middleware('auth')->group(function() {
         Route::get('/firmware', 'index')->name('index');
         Route::get('/firmware/create', 'create')->name('create');
         Route::post('/firmware/create', 'store')->name('store');
-        Route::get('/firmware/edit/{firmware}', 'edit')->name('edit');
-        Route::put('/firmware/edit/{firmware}', 'update')->name('update');
-        Route::delete('/firmware/delete/{firmware}', 'destroy')->name('destroy');
+        Route::get('/firmware/{firmware}/edit', 'edit')->name('edit');
+        Route::put('/firmware/{firmware}/edit', 'update')->name('update');
+        Route::delete('/firmware/{firmware}/delete', 'destroy')->name('destroy');
     });
 });
