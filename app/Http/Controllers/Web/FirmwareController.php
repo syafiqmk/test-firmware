@@ -9,7 +9,7 @@ use App\Models\DeviceCategory;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 
-class FirmawareController extends Controller
+class FirmwareController extends Controller
 {
     // Index
     public function index() {
