@@ -55,8 +55,6 @@ Route::middleware('auth')->group(function() {
         Route::get('/category', 'index')->name('index');
         Route::get('/category/create', 'create')->name('create');
         Route::post('/category/create', 'store')->name('store');
-        Route::get('/category/edit', 'edit')->name('edit');
-        Route::put('/category/edit', 'update')->name('update');
         Route::get('/category/edit/{deviceCategory}', 'edit')->name('edit');
         Route::put('/category/edit/{deviceCategory}', 'update')->name('update');
         Route::delete('/category/delete/{deviceCategory}', 'destroy')->name('destroy');
