@@ -40,6 +40,30 @@
     </div>
     {{-- End of Navbar --}}
 
+    {{-- Search --}}
+    <div class="container pt-5">
+        <form action="" method="post">
+            @csrf
+            <div class="input-group mb-3 mt-3">
+
+                <input type="text" name="search" id="search" class="form-control" placeholder="Search">
+
+                <select name="brand" id="brand" class="form-select">
+                    <option value="0">Select Brand</option>
+                </select>
+
+                <select name="category" id="category" class="form-select">
+                    <option value="0">Select Category</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+
+
+    </div>
+    {{-- End of Search --}}
+
     {{-- Bootstrap CDN JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
