@@ -42,8 +42,9 @@
 
     {{-- Search --}}
     <div class="container pt-5">
-        <form action="" method="post">
+        <form action="" method="get">
             @csrf
+            
             <div class="input-group mb-3 mt-3">
 
                 <input type="text" name="search" id="search" class="form-control" placeholder="Search">
