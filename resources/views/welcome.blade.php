@@ -23,13 +23,19 @@
     {{-- Navbar --}}
     <div class="fixed-top py-2 px-3 bg-primary">
         <div class="container">
-            <span class="fs-5 text-white">Firmware</span>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="fs-5 text-white">Firmware</span>
+                </div>
 
-            @if (auth()->check())
-                <a href="{{ route() }}" class="text-white float-end text-decoration-none">Dashboard</a>
-            @else
-                <a href="{{ route('auth.login') }}" class="text-white float-end text-decoration-none">Login</a>
-            @endif
+                <div class="col-md-6 text-end">
+                    @if (auth()->check())
+                        <a href="{{ route('firmware.index') }}" class="text-white text-decoration-none fs-6">Dashboard</a>
+                    @else
+                        <a href="{{ route('auth.login') }}" class="text-white text-decoration-none fs-6">Login</a>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
     {{-- End of Navbar --}}
