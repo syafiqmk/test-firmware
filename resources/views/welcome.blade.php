@@ -59,10 +59,27 @@
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </form>
-
-
     </div>
     {{-- End of Search --}}
+
+    {{-- Content --}}
+    <div class="container">
+        <table class="table table-stripped">
+            <thead>
+                <th>#</th>
+                <th>Series</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="text-center">No entries!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {{-- End of Content --}}
 
     {{-- Bootstrap CDN JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
