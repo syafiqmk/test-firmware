@@ -27,6 +27,10 @@
 
                 <h4>Login</h4>
 
+                <div class="my-2">
+                    @include('component.alerts')
+                </div>
+
                 <form action="{{ route('auth.login') }}" method="post">
                     @csrf
 
