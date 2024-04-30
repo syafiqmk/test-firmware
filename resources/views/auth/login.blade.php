@@ -31,6 +31,8 @@
                     @include('component.alerts')
                 </div>
 
+                {{-- test --}}
+
                 <form action="{{ route('auth.login') }}" method="post">
                     @csrf
 
